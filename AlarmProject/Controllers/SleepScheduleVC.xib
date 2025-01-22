@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SleepScheduleVC" customModule="AlarmProject" customModuleProvider="target">
+            <connections>
+                <outlet property="alarmOptionsContainerView" destination="dTg-ra-zyR" id="S6M-DY-ezE"/>
+                <outlet property="alarmSwitch" destination="pd3-Tw-7uM" id="zcg-xe-c6x"/>
+                <outlet property="bedTime" destination="xRE-U0-ZdO" id="05Z-JK-vCv"/>
+                <outlet property="bedTimeofday" destination="Wz0-S3-FW5" id="paS-bu-cd0"/>
+                <outlet property="cancelButton" destination="mY9-F1-bkZ" id="Yh4-8x-xxD"/>
+                <outlet property="circularSlider" destination="QVT-iB-AFq" id="41a-x7-nTB"/>
+                <outlet property="containerView" destination="zD6-ZZ-sff" id="9k8-pd-Q7o"/>
+                <outlet property="doneButton" destination="iSg-LW-4Zf" id="Qcy-Kh-AmS"/>
+                <outlet property="sleepDuration" destination="0zd-jt-uPE" id="1Mx-NL-FU2"/>
+                <outlet property="sleepDurationMessage" destination="a3l-hd-UQt" id="PqD-r9-ftc"/>
+                <outlet property="sleepdurationIcon" destination="O3F-21-S8Z" id="1Bl-Kc-vrT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wakeupTime" destination="3M4-GL-5yA" id="IT6-ii-SXz"/>
+                <outlet property="wakeupTimeofday" destination="mfP-95-Jym" id="nBc-r6-bdc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY9-F1-bkZ">
+                    <rect key="frame" x="0.0" y="12" width="80" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="ATV-oC-Sm4"/>
+                        <constraint firstAttribute="height" constant="40" id="mUM-TS-m16"/>
+                    </constraints>
+                    <color key="tintColor" name="AccentColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-LW-4Zf">
+                    <rect key="frame" x="313" y="12" width="80" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7ud-Qi-Rhw"/>
+                        <constraint firstAttribute="width" constant="80" id="Z9b-cw-9gU"/>
+                    </constraints>
+                    <color key="tintColor" name="AccentColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Wake Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER4-zp-AzK">
+                    <rect key="frame" x="130.66666666666669" y="20" width="131.66666666666669" height="20.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zD6-ZZ-sff">
+                    <rect key="frame" x="12" y="68.333333333333314" width="369" height="479.99999999999994"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UaW-q5-lTz">
+                            <rect key="frame" x="57.666666666666664" y="15.999999999999996" width="93.666666666666686" height="59.666666666666657"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="abp-bP-rdQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="16.666666666666668"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Bz-qS-HDe">
+                                            <rect key="frame" x="0.0" y="2.6666666666666661" width="39.666666666666664" height="11.333333333333334"/>
+                                            <color key="tintColor" systemColor="systemCyanColor"/>
+                                            <imageReference key="image" image="bed.double.fill" catalog="system" symbolScale="small"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEDTIME" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vO-N9-h0C">
+                                            <rect key="frame" x="41.666666666666657" y="0.0" width="52" height="16.666666666666668"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" systemColor="underPageBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:00 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRE-U0-ZdO">
+                                    <rect key="frame" x="0.0" y="16.666666666666671" width="93.666666666666671" height="28.666666666666671"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomorrow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wz0-S3-FW5">
+                                    <rect key="frame" x="0.0" y="45.333333333333329" width="93.666666666666671" height="14.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" systemColor="underPageBackgroundColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e9r-A7-mPz">
+                            <rect key="frame" x="192.33333333333337" y="15.999999999999996" width="144.66666666666663" height="59.666666666666657"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="uta-8s-5uK">
+                                    <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="16.666666666666668"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xF4-qE-9b1">
+                                            <rect key="frame" x="0.0" y="1.6666666666666661" width="13.333333333333334" height="13.333333333333334"/>
+                                            <color key="tintColor" systemColor="underPageBackgroundColor"/>
+                                            <imageReference key="image" image="deskclock" catalog="system" symbolScale="small"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAKE UP - NO ALARM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3p-c1-MYb">
+                                            <rect key="frame" x="15.333333333333314" y="0.0" width="129.33333333333334" height="16.666666666666668"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" systemColor="underPageBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:00 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3M4-GL-5yA">
+                                    <rect key="frame" x="0.0" y="16.666666666666671" width="144.66666666666666" height="28.666666666666671"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                    <color key="textColor" systemColor="underPageBackgroundColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomorrow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfP-95-Jym">
+                                    <rect key="frame" x="0.0" y="45.333333333333329" width="144.66666666666666" height="14.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" systemColor="underPageBackgroundColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVT-iB-AFq" customClass="CircularSliderView" customModule="AlarmProject" customModuleProvider="target">
+                            <rect key="frame" x="32" y="87.666666666666657" width="305" height="296.33333333333337"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="sliderImage" value="SlideWallClock"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="centerImage" value="WallClock"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 hr 15 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zd-jt-uPE">
+                            <rect key="frame" x="138.33333333333334" y="404" width="92.333333333333343" height="21.666666666666686"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="TcH-v9-Iyv">
+                            <rect key="frame" x="57.000000000000014" y="436" width="255.33333333333337" height="20"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O3F-21-S8Z">
+                                    <rect key="frame" x="0.0" y="1.6666666666666679" width="11" height="16.666666666666664"/>
+                                    <color key="tintColor" systemColor="systemOrangeColor"/>
+                                    <imageReference key="image" image="exclamationmark.circle.fill" catalog="system" symbolScale="small"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12" scale="small" weight="medium"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This schedule doesnt meet your sleep goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3l-hd-UQt">
+                                    <rect key="frame" x="13.000000000000014" y="0.0" width="242.33333333333337" height="20"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" systemColor="underPageBackgroundColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="HjK-rP-WnH"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1764705926" green="0.1764705926" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="TcH-v9-Iyv" firstAttribute="centerX" secondItem="zD6-ZZ-sff" secondAttribute="centerX" id="Bx8-Zh-uxa"/>
+                        <constraint firstItem="UaW-q5-lTz" firstAttribute="top" secondItem="zD6-ZZ-sff" secondAttribute="top" constant="16" id="Dem-6J-GeL"/>
+                        <constraint firstAttribute="height" constant="480" id="F1H-Kv-n9k"/>
+                        <constraint firstAttribute="bottom" secondItem="QVT-iB-AFq" secondAttribute="bottom" constant="96" id="Hog-18-lTg"/>
+                        <constraint firstItem="0zd-jt-uPE" firstAttribute="centerX" secondItem="zD6-ZZ-sff" secondAttribute="centerX" id="L38-e0-rkw"/>
+                        <constraint firstItem="QVT-iB-AFq" firstAttribute="leading" secondItem="zD6-ZZ-sff" secondAttribute="leading" constant="32" id="OYb-hv-8p8"/>
+                        <constraint firstItem="TcH-v9-Iyv" firstAttribute="top" secondItem="0zd-jt-uPE" secondAttribute="bottom" constant="10.333333333333314" id="SKP-XW-yH4"/>
+                        <constraint firstItem="0zd-jt-uPE" firstAttribute="top" secondItem="QVT-iB-AFq" secondAttribute="bottom" constant="20" id="aBB-w2-AOC"/>
+                        <constraint firstItem="QVT-iB-AFq" firstAttribute="top" secondItem="UaW-q5-lTz" secondAttribute="bottom" constant="12" id="mil-4k-ZhX"/>
+                        <constraint firstItem="UaW-q5-lTz" firstAttribute="centerX" secondItem="zD6-ZZ-sff" secondAttribute="centerX" constant="-80" id="mpN-cB-qDy"/>
+                        <constraint firstItem="e9r-A7-mPz" firstAttribute="centerX" secondItem="zD6-ZZ-sff" secondAttribute="centerX" constant="80" id="naS-sB-KYf"/>
+                        <constraint firstAttribute="trailing" secondItem="QVT-iB-AFq" secondAttribute="trailing" constant="32" id="nvA-Fm-Ou4"/>
+                        <constraint firstItem="e9r-A7-mPz" firstAttribute="top" secondItem="zD6-ZZ-sff" secondAttribute="top" constant="16" id="omt-Sv-KGJ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2N-Zk-Ufa">
+                    <rect key="frame" x="12" y="560.33333333333337" width="369" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="04I-KK-Pu1"/>
+                    </constraints>
+                    <color key="tintColor" name="AccentColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Edit Sleep Schedule in Health">
+                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                        <color key="baseBackgroundColor" red="0.1764705926" green="0.1764705926" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm Options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtx-Vk-V6T">
+                    <rect key="frame" x="12" y="640.33333333333337" width="160.33333333333334" height="28.666666666666629"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTg-ra-zyR">
+                    <rect key="frame" x="12" y="673" width="369" height="44"/>
+                    <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pd3-Tw-7uM">
+                            <rect key="frame" x="304" y="8" width="51" height="31"/>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAn-oY-ais">
+                            <rect key="frame" x="8" y="13" width="45" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1764705926" green="0.1764705926" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="pd3-Tw-7uM" secondAttribute="trailing" constant="16" id="12C-qS-7KJ"/>
+                        <constraint firstAttribute="height" constant="44" id="XmH-qn-Lmr"/>
+                        <constraint firstItem="pd3-Tw-7uM" firstAttribute="top" secondItem="dTg-ra-zyR" secondAttribute="top" constant="8" id="yoR-X5-M5L"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.1176470518" green="0.109803915" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="mY9-F1-bkZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="425-86-Kwy"/>
+                <constraint firstItem="ER4-zp-AzK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="49G-OG-aZ5"/>
+                <constraint firstItem="iSg-LW-4Zf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="4DW-Yh-o5A"/>
+                <constraint firstItem="Vtx-Vk-V6T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="6HD-qm-6Mh"/>
+                <constraint firstAttribute="trailing" secondItem="dTg-ra-zyR" secondAttribute="trailing" constant="12" id="8iz-1A-yAN"/>
+                <constraint firstItem="ER4-zp-AzK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ADX-nG-RTN"/>
+                <constraint firstItem="dTg-ra-zyR" firstAttribute="top" secondItem="Vtx-Vk-V6T" secondAttribute="bottom" constant="4" id="H6O-AQ-isl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="I2N-Zk-Ufa" secondAttribute="trailing" constant="12" id="Mri-NY-4b8"/>
+                <constraint firstItem="I2N-Zk-Ufa" firstAttribute="top" secondItem="zD6-ZZ-sff" secondAttribute="bottom" constant="12" id="VoL-i8-xeb"/>
+                <constraint firstItem="zD6-ZZ-sff" firstAttribute="top" secondItem="ER4-zp-AzK" secondAttribute="bottom" constant="28" id="XtH-QM-NX6"/>
+                <constraint firstItem="zD6-ZZ-sff" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="cDQ-Ud-Dh0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iSg-LW-4Zf" secondAttribute="trailing" id="gXf-oy-tjN"/>
+                <constraint firstItem="Vtx-Vk-V6T" firstAttribute="top" secondItem="I2N-Zk-Ufa" secondAttribute="bottom" constant="36" id="lKO-XT-046"/>
+                <constraint firstItem="I2N-Zk-Ufa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="pDx-WH-PY9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zD6-ZZ-sff" secondAttribute="trailing" constant="12" id="r34-sx-WK1"/>
+                <constraint firstItem="mY9-F1-bkZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="rqO-Ik-cbb"/>
+                <constraint firstItem="dTg-ra-zyR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="zrt-wf-Ijz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-12.67605633802817"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="SlideWallClock" width="587" height="587"/>
+        <image name="WallClock" width="332.66665649414062" height="345.33334350585938"/>
+        <image name="bed.double.fill" catalog="system" width="128" height="82"/>
+        <image name="deskclock" catalog="system" width="128" height="125"/>
+        <image name="exclamationmark.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="underPageBackgroundColor">
+            <color red="0.70980392156862748" green="0.71764705882352942" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
